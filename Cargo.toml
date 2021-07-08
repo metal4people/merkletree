@@ -7,11 +7,10 @@ authors = [
   "Taras Sich <metal4people@gmail.com>"
 ]
 
-
 description   = "Merkle tree implementation with proof generation and validation support."
-license       = "BSD-3-Clause"
-homepage      = "TBD"
-repository    = "TBD"
+license       = "MIT"
+homepage      = "https://github.com/metal4people/merkletree"
+repository    = "https://github.com/metal4people/merkletree"
 readme        = "README.md"
 keywords      = ["merkle", "merkle-tree", "merkle_tree"]
 categories    = ["data-structures", "cryptography"]
