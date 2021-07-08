@@ -1,0 +1,96 @@
+   Compiling merkletree v0.1.0 (/home/taras/install/rust/github/merkletree)
+    Finished bench [optimized] target(s) in 3.35s
+     Running unittests (/home/taras/install/rust/github/merkletree/target/release/deps/merkletree-b35df1e299cc8276)
+
+running 9 tests
+test tests::test_build_tree1 ... ignored
+test tests::test_build_tree3 ... ignored
+test tests::test_build_tree9 ... ignored
+test tests::test_build_tree_empty ... ignored
+test tests::test_from_str_vec ... ignored
+test tests::test_nth_proof ... ignored
+test tests::test_valid_proof ... ignored
+test tests::test_valid_proof_str ... ignored
+test tests::test_wrong_proof ... ignored
+
+test result: ok. 0 passed; 0 failed; 9 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests (/home/taras/install/rust/github/merkletree/target/release/deps/proof-ad3f0af2455212f2)
+WARNING: HTML report generation will become a non-default optional feature in Criterion.rs 0.4.0.
+This feature is being moved to cargo-criterion (https://github.com/bheisler/cargo-criterion) and will be optional in a future version of Criterion.rs. To silence this warning, either switch to cargo-criterion or enable the 'html_reports' feature in your Cargo.toml.
+
+Gnuplot not found, using plotters backend
+Benchmarking MerkleTree::build_tree - small
+Benchmarking MerkleTree::build_tree - small: Warming up for 3.0000 s
+Benchmarking MerkleTree::build_tree - small: Collecting 100 samples in estimated 5.0019 s (11M iterations)
+Benchmarking MerkleTree::build_tree - small: Analyzing
+MerkleTree::build_tree - small
+                        time:   [457.29 ns 464.70 ns 473.90 ns]
+Found 11 outliers among 100 measurements (11.00%)
+  7 (7.00%) high mild
+  4 (4.00%) high severe
+
+Benchmarking MerkleTree::gen_proof - small
+Benchmarking MerkleTree::gen_proof - small: Warming up for 3.0000 s
+Benchmarking MerkleTree::gen_proof - small: Collecting 100 samples in estimated 5.0000 s (14M iterations)
+Benchmarking MerkleTree::gen_proof - small: Analyzing
+MerkleTree::gen_proof - small
+                        time:   [349.54 ns 352.23 ns 355.10 ns]
+                        change: [-6.4700% -4.6312% -2.7204%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Found 5 outliers among 100 measurements (5.00%)
+  1 (1.00%) low mild
+  1 (1.00%) high mild
+  3 (3.00%) high severe
+
+Benchmarking MerkleTree::validate_proof - small
+Benchmarking MerkleTree::validate_proof - small: Warming up for 3.0000 s
+Benchmarking MerkleTree::validate_proof - small: Collecting 100 samples in estimated 5.0004 s (14M iterations)
+Benchmarking MerkleTree::validate_proof - small: Analyzing
+MerkleTree::validate_proof - small
+                        time:   [352.78 ns 353.71 ns 354.70 ns]
+                        change: [-15.646% -13.290% -11.203%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Found 12 outliers among 100 measurements (12.00%)
+  1 (1.00%) low severe
+  1 (1.00%) low mild
+  3 (3.00%) high mild
+  7 (7.00%) high severe
+
+Benchmarking MerkleTree::build_tree - big
+Benchmarking MerkleTree::build_tree - big: Warming up for 3.0000 s
+Benchmarking MerkleTree::build_tree - big: Collecting 100 samples in estimated 5.2016 s (91k iterations)
+Benchmarking MerkleTree::build_tree - big: Analyzing
+MerkleTree::build_tree - big
+                        time:   [56.775 us 57.039 us 57.350 us]
+                        change: [-43.365% -40.877% -38.162%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Found 7 outliers among 100 measurements (7.00%)
+  1 (1.00%) low mild
+  4 (4.00%) high mild
+  2 (2.00%) high severe
+
+Benchmarking MerkleTree::gen_proof - big
+Benchmarking MerkleTree::gen_proof - big: Warming up for 3.0000 s
+Benchmarking MerkleTree::gen_proof - big: Collecting 100 samples in estimated 5.0812 s (96k iterations)
+Benchmarking MerkleTree::gen_proof - big: Analyzing
+MerkleTree::gen_proof - big
+                        time:   [51.514 us 51.799 us 52.173 us]
+                        change: [-21.877% -20.535% -19.277%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Found 8 outliers among 100 measurements (8.00%)
+  3 (3.00%) high mild
+  5 (5.00%) high severe
+
+Benchmarking MerkleTree::validate_proof - big
+Benchmarking MerkleTree::validate_proof - big: Warming up for 3.0000 s
+Benchmarking MerkleTree::validate_proof - big: Collecting 100 samples in estimated 5.1715 s (96k iterations)
+Benchmarking MerkleTree::validate_proof - big: Analyzing
+MerkleTree::validate_proof - big
+                        time:   [53.869 us 54.321 us 54.900 us]
+                        change: [-9.1595% -8.4161% -7.6492%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Found 4 outliers among 100 measurements (4.00%)
+  1 (1.00%) high mild
+  3 (3.00%) high severe
+

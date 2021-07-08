@@ -11,7 +11,7 @@ use rand::RngCore;
 use merkletree::MerkleTree;
 
 fn bench_small_str_tree(c: &mut Criterion) {
-    c.bench_function("MerkleTree::from_bec - small", |b| {
+    c.bench_function("MerkleTree::build_tree - small", |b| {
         let values = vec!["one", "two", "three", "four"];
         b.iter(|| MerkleTree::build_tree(black_box(values.clone())))
     });
