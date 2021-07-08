@@ -1,0 +1,25 @@
+[package]
+name = "merkletree"
+version = "0.1.0"
+edition = "2018"
+
+authors = [
+  "Taras Sich <metal4people@gmail.com>"
+]
+
+
+description   = "Merkle tree implementation with proof generation and validation support."
+license       = "BSD-3-Clause"
+homepage      = "TBD"
+repository    = "TBD"
+readme        = "README.md"
+keywords      = ["merkle", "merkle-tree", "merkle_tree"]
+categories    = ["data-structures", "cryptography"]
+
+[dev-dependencies]
+criterion = "0.3.4"
+rand      = "0.7.3"
+
+[[bench]]
+name    = "proof"
+harness = false

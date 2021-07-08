@@ -1,0 +1,1 @@
+initSidebarItems({"enum":[["Tree","Binary tree that’s used for Merkle tree implementation"]],"struct":[["MerkleTree","A Merkle tree is a binary tree that has two main types of nodes:"]]});
